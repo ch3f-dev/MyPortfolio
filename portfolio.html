@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olushola O. Olubode | Hospitality Consultant &amp; Leadership Facilitator</title>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans / Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Refined Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#1A2228',
+                            light: '#243038',
+                            dark: '#11171B',
+                        },
+                        brass: {
+                            DEFAULT: '#C59B27',
+                            light: '#D8B44C',
+                            dark: '#9E7A19',
+                            muted: 'rgba(197, 155, 39, 0.12)',
+                        },
+                        ivory: {
+                            DEFAULT: '#FAF8F5',
+                            dark: '#F1EDE6',
+                            card: '#FFFFFF',
+                        },
+                        slate: {
+                            body: '#4A5568',
+                            muted: '#718096',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', '"Inter"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'executive': '0 12px 32px -8px rgba(26, 34, 40, 0.08)',
+                        'card-hover': '0 20px 40px -12px rgba(26, 34, 40, 0.14)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom subtle scrollbar and utility transitions */
+        body {
+            background-color: #FAF8F5;
+            color: #1A2228;
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .gold-divider {
+            height: 2px;
+            width: 56px;
+            background: linear-gradient(90deg, #C59B27 0%, rgba(197, 155, 39, 0.3) 100%);
+        }
+        .subtle-grid-pattern {
+            background-image: radial-gradient(rgba(197, 155, 39, 0.15) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+        .module-content {
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brass selection:text-white">
+
+    <!-- Sticky Navigation Bar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy/95 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Monogram & Name -->
+                <a href="#top" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-brass/15 border border-brass/50 flex items-center justify-center text-brass font-serif font-bold text-lg tracking-wider group-hover:bg-brass group-hover:text-navy transition-colors">
+                        OO
+                    </div>
+                    <div>
+                        <span class="block text-white font-serif font-semibold tracking-wide text-sm sm:text-base">OLUSHOLA O. OLUBODE</span>
+                        <span class="block text-brass text-[11px] uppercase tracking-[0.18em]">Hospitality &amp; Leadership</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-300">
+                    <a href="#profile" class="hover:text-brass transition-colors">Profile &amp; Philosophy</a>
+                    <a href="#expertise" class="hover:text-brass transition-colors">Expertise</a>
+                    <a href="#experience" class="hover:text-brass transition-colors">Experience</a>
+                    <a href="#consulting" class="hover:text-brass transition-colors">Consulting</a>
+                    <a href="#training" class="hover:text-brass transition-colors">Leadership Training</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-lg bg-brass text-navy font-semibold hover:bg-brass-light transition-all shadow-sm">
+                        Book Consultation
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-lg text-gray-200 hover:text-brass hover:bg-white/5 transition-colors">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-dark border-b border-white/10 px-4 pt-3 pb-6 space-y-2">
+            <a href="#profile" class="mobile-link block px-4 py-3 rounded-lg text-gray-200 hover:bg-white/5 hover:text-brass font-medium">Profile &amp; Philosophy</a>
+            <a href="#expertise" class="mobile-link block px-4 py-3 rounded-lg text-gray-200 hover:bg-white/5 hover:text-brass font-medium">Core Areas of Expertise</a>
+            <a href="#experience" class="mobile-link block px-4 py-3 rounded-lg text-gray-200 hover:bg-white/5 hover:text-brass font-medium">Career Timeline</a>
+            <a href="#consulting" class="mobile-link block px-4 py-3 rounded-lg text-gray-200 hover:bg-white/5 hover:text-brass font-medium">Consulting Engagements</a>
+            <a href="#training" class="mobile-link block px-4 py-3 rounded-lg text-gray-200 hover:bg-white/5 hover:text-brass font-medium">Leadership Training</a>
+            <a href="#contact" class="mobile-link block px-4 py-3 mt-2 rounded-lg bg-brass text-navy text-center font-semibold">Contact &amp; Bookings</a>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section id="top" class="relative bg-navy text-white pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <!-- Subtle architectural accent background -->
+        <div class="absolute inset-0 subtle-grid-pattern opacity-40 pointer-events-none"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brass/10 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-ivory to-transparent opacity-5 pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Column: Executive Identity & CTAs -->
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-brass/30 text-brass text-xs font-semibold uppercase tracking-[0.16em]">
+                        <span class="w-2 h-2 rounded-full bg-brass animate-pulse"></span>
+                        Executive Portfolio &bull; Abuja, Nigeria
+                    </div>
+
+                    <div class="space-y-2">
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
+                            OLUWASEUN O. OLUBODE
+                        </h1>
+                        <p class="text-lg sm:text-xl text-brass-light font-medium tracking-wide">
+                            (Olushola Oluwaseun)
+                        </p>
+                    </div>
+
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-200 font-medium border-l-2 border-brass pl-4 py-1">
+                        Hospitality Consultant &nbsp;|&nbsp; Operations &amp; Business Management &nbsp;|&nbsp; Leadership Facilitator
+                    </p>
+
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Strengthening day-to-day hospitality performance through structured multi-department operations, disciplined inventory &amp; financial controls, and practical, respect-driven team leadership.
+                    </p>
+
+                    <!-- Direct Contact Strip -->
+                    <div class="flex flex-wrap items-center gap-y-3 gap-x-6 pt-2 text-sm text-gray-300">
+                        <span class="inline-flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-brass"></i>
+                            Abuja, Nigeria
+                        </span>
+                        <a href="tel:+2348135692732" class="inline-flex items-center gap-2 hover:text-brass transition-colors">
+                            <i class="fa-solid fa-phone text-brass"></i>
+                            +234 813 569 2732
+                        </a>
+                        <a href="mailto:nellyseun2008@gmail.com" class="inline-flex items-center gap-2 hover:text-brass transition-colors">
+                            <i class="fa-solid fa-envelope text-brass"></i>
+                            nellyseun2008@gmail.com
+                        </a>
+                        <a href="https://linkedin.com/in/olu3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-brass transition-colors">
+                            <i class="fa-brands fa-linkedin text-brass"></i>
+                            linkedin.com/in/olu3
+                        </a>
+                    </div>
+
+                    <!-- Primary Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <a href="#consulting" class="px-6 py-3.5 rounded-xl bg-brass text-navy font-semibold text-sm sm:text-base hover:bg-brass-light transition-all shadow-lg shadow-black/20 inline-flex items-center gap-2">
+                            <span>View Consulting &amp; Experience</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#training" class="px-6 py-3.5 rounded-xl bg-white/10 text-white border border-white/20 font-semibold text-sm sm:text-base hover:bg-white/15 hover:border-brass/50 transition-all inline-flex items-center gap-2">
+                            <i class="fa-solid fa-chalkboard-user text-brass"></i>
+                            <span>Book Leadership Training</span>
+                        </a>
+                        <a href="#contact" class="px-6 py-3.5 rounded-xl text-brass-light hover:text-white font-semibold text-sm sm:text-base underline underline-offset-4 decoration-brass/60 hover:decoration-white transition-all">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Executive Credentials Card -->
+                <div class="lg:col-span-4">
+                    <div class="bg-navy-light/90 border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-sm space-y-6">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-5">
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-brass font-semibold">Current Leadership</p>
+                                <h2 class="font-serif text-xl text-white font-semibold mt-1">Dual Executive Mandate</h2>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-brass/15 border border-brass/30 flex items-center justify-center text-brass">
+                                <i class="fa-solid fa-award text-xl"></i>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-navy/70 border border-white/5">
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-brass">Hospitality Tech &amp; Growth</span>
+                                <p class="text-white font-semibold text-sm mt-1">Head of Revenue</p>
+                                <p class="text-gray-400 text-xs mt-0.5">Apples of Gold Consulting (AOG) &bull; Official Partner, Yanolja Cloud Solution Nigeria</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-navy/70 border border-white/5">
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-brass">Multi-Concept Operations</span>
+                                <p class="text-white font-semibold text-sm mt-1">Business Manager</p>
+                                <p class="text-gray-400 text-xs mt-0.5">Crossover Restaurant &amp; Café Chocolat, Abuja (Feb 2026 – Present)</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3 pt-2 border-t border-white/10 text-center">
+                            <div class="p-3 rounded-xl bg-white/5">
+                                <span class="block font-serif text-2xl font-bold text-brass">10+ Yrs</span>
+                                <span class="text-xs text-gray-300">Hospitality Operations</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-white/5">
+                                <span class="block font-serif text-2xl font-bold text-brass">Multi-Unit</span>
+                                <span class="text-xs text-gray-300">Launch &amp; Turnaround</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. EXECUTIVE PROFILE & LEADERSHIP PHILOSOPHY -->
+    <section id="profile" class="py-20 lg:py-28 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <!-- Executive Profile Narrative -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <span class="text-brass font-semibold text-xs uppercase tracking-[0.2em]">Executive Overview</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy mt-2">
+                            Executive Profile &amp; Operational Philosophy
+                        </h2>
+                        <div class="gold-divider mt-4"></div>
+                    </div>
+
+                    <p class="text-slate-body text-base sm:text-lg leading-relaxed">
+                        <strong class="text-navy font-semibold">Olushola Oluwaseun</strong> is a hospitality operations and business management professional with extensive hands-on experience spanning restaurant and multi-department operations, team supervision, manager development, kitchen training, inventory control, operational reporting, and business improvement.
+                    </p>
+
+                    <p class="text-slate-body text-base leading-relaxed">
+                        His career encompasses operational and senior management roles across hotels, quick-service franchises, multi-concept restaurants, and food-service enterprises, alongside targeted consulting assignments focused on strengthening day-to-day operational performance, revenue growth, and accountability.
+                    </p>
+
+                    <p class="text-slate-body text-base leading-relaxed">
+                        Grounded in practical management, his leadership focuses on helping teams clearly understand what is expected of them, take ownership of their responsibilities, and consistently execute established operational standards.
+                    </p>
+
+                    <!-- Core Leadership Values Pills -->
+                    <div class="pt-4">
+                        <h3 class="text-xs font-bold uppercase tracking-[0.16em] text-navy mb-4">Core Leadership Pillars</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white border border-navy/10 shadow-sm">
+                                <div class="w-8 h-8 rounded-lg bg-brass-muted text-brass flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-handshake text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-navy text-sm">Mutual Respect</h4>
+                                    <p class="text-xs text-slate-muted mt-0.5">Professional relationships between superiors and subordinates built on dignity.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white border border-navy/10 shadow-sm">
+                                <div class="w-8 h-8 rounded-lg bg-brass-muted text-brass flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-bullseye text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-navy text-sm">Clear Expectations</h4>
+                                    <p class="text-xs text-slate-muted mt-0.5">Defined roles, measurable standards, and structured daily routines.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white border border-navy/10 shadow-sm">
+                                <div class="w-8 h-8 rounded-lg bg-brass-muted text-brass flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-comments text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-navy text-sm">Constructive Communication</h4>
+                                    <p class="text-xs text-slate-muted mt-0.5">Addressing performance gaps fairly without relying on intimidation.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white border border-navy/10 shadow-sm">
+                                <div class="w-8 h-8 rounded-lg bg-brass-muted text-brass flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-compass text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-navy text-sm">Practical Accountability</h4>
+                                    <p class="text-xs text-slate-muted mt-0.5">Leading by example and reinforcing follow-through across every shift.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Highlighted Leadership Quote Card -->
+                <div class="lg:col-span-5 lg:mt-10">
+                    <div class="relative bg-navy text-white rounded-2xl p-8 sm:p-10 shadow-executive overflow-hidden">
+                        <div class="absolute top-4 right-6 text-brass/15 font-serif text-8xl leading-none select-none">&rdquo;</div>
+                        <div class="relative z-10 space-y-6">
+                            <div class="inline-flex items-center gap-2 text-brass text-xs font-semibold uppercase tracking-[0.18em]">
+                                <i class="fa-solid fa-quote-left"></i>
+                                <span>Leadership Philosophy</span>
+                            </div>
+
+                            <blockquote class="font-serif italic text-2xl sm:text-[26px] text-white leading-snug">
+                                “You cannot build an accountable team with fear, and you cannot demand respect if you do not demonstrate it.”
+                            </blockquote>
+
+                            <div class="h-px bg-white/15 w-full"></div>
+
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Authority and accountability do not require intimidation. Effective hospitality managers set clear expectations, communicate respectfully, model the standards they expect, and hold team members constructively responsible for results.
+                            </p>
+
+                            <div class="flex items-center gap-3 pt-1">
+                                <div class="w-10 h-10 rounded-full bg-brass text-navy font-serif font-bold flex items-center justify-center text-sm">
+                                    OO
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-white">Olushola O. Olubode</p>
+                                    <p class="text-xs text-brass-light">Hospitality Operations &amp; Leadership Facilitator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CORE AREAS OF EXPERTISE (INTERACTIVE TABS & CARDS) -->
+    <section id="expertise" class="py-20 lg:py-28 bg-ivory-dark border-y border-navy/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <span class="text-brass font-semibold text-xs uppercase tracking-[0.2em]">Capabilities &amp; Competencies</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy mt-2">
+                    Core Areas of Expertise
+                </h2>
+                <div class="gold-divider mx-auto mt-4"></div>
+                <p class="text-slate-body mt-4 text-base">
+                    Select a domain below to explore how operational discipline, people leadership, and commercial strategy come together in practice.
+                </p>
+            </div>
+
+            <!-- Interactive Filter Tabs -->
+            <div id="expertise-tabs" class="flex flex-wrap justify-center gap-2.5 mb-10" role="tablist">
+                <button type="button" data-filter="all" class="expertise-tab active px-5 py-2.5 rounded-xl text-sm font-semibold bg-navy text-white shadow-sm transition-all">
+                    All Core Domains (5)
+                </button>
+                <button type="button" data-filter="operations" class="expertise-tab px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-navy hover:bg-navy/5 border border-navy/10 transition-all">
+                    Hospitality Operations
+                </button>
+                <button type="button" data-filter="leadership" class="expertise-tab px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-navy hover:bg-navy/5 border border-navy/10 transition-all">
+                    Leadership &amp; People
+                </button>
+                <button type="button" data-filter="controls" class="expertise-tab px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-navy hover:bg-navy/5 border border-navy/10 transition-all">
+                    Operational Controls
+                </button>
+                <button type="button" data-filter="improvement" class="expertise-tab px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-navy hover:bg-navy/5 border border-navy/10 transition-all">
+                    Business Improvement
+                </button>
+                <button type="button" data-filter="stakeholder" class="expertise-tab px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-navy hover:bg-navy/5 border border-navy/10 transition-all">
+                    Stakeholder Coordination
+                </button>
+            </div>
+
+            <!-- Expertise Cards Grid -->
+            <div id="expertise-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Hospitality Operations -->
+                <div data-category="operations" class="expertise-card bg-white rounded-2xl p-7 border border-navy/10 shadow-executive hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-navy text-brass flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-utensils text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy mb-3">Hospitality Operations</h3>
+                        <p class="text-slate-body text-sm leading-relaxed mb-5">
+                            End-to-end management of restaurant and multi-department hospitality environments, ensuring seamless front-of-house and back-of-house execution.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 pt-4 border-t border-navy/10 text-xs font-medium text-navy">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Restaurant &amp; multi-department operations</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Kitchen &amp; food-service coordination</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Service consistency &amp; guest standards</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Leadership & People Management -->
+                <div data-category="leadership" class="expertise-card bg-white rounded-2xl p-7 border border-navy/10 shadow-executive hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-navy text-brass flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-users-gear text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy mb-3">Leadership &amp; People Management</h3>
+                        <p class="text-slate-body text-sm leading-relaxed mb-5">
+                            Building cohesive, high-accountability teams through structured coaching, clear delegation, and respectful workplace communication.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 pt-4 border-t border-navy/10 text-xs font-medium text-navy">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Team supervision &amp; shift deployment</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Manager &amp; staff capability development</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Mutual respect &amp; performance accountability</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Operational Controls -->
+                <div data-category="controls" class="expertise-card bg-white rounded-2xl p-7 border border-navy/10 shadow-executive hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-navy text-brass flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-clipboard-check text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy mb-3">Operational Controls</h3>
+                        <p class="text-slate-body text-sm leading-relaxed mb-5">
+                            Protecting margins and eliminating leakage with rigorous stock verification, custom reporting tools, and daily SOP enforcement.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 pt-4 border-t border-navy/10 text-xs font-medium text-navy">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Monthly &amp; spot inventory audits</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Stock monitoring &amp; bespoke reporting templates</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Operational procedures &amp; strict follow-through</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Business Improvement -->
+                <div data-category="improvement" class="expertise-card bg-white rounded-2xl p-7 border border-navy/10 shadow-executive hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-navy text-brass flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-chart-line text-lg"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy mb-3">Business Improvement</h3>
+                        <p class="text-slate-body text-sm leading-relaxed mb-5">
+                            Revitalizing hospitality venues through strategic repositioning, commercial growth plans, and modern hospitality technology adoption.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 pt-4 border-t border-navy/10 text-xs font-medium text-navy">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Rebranding concepts &amp; renovation planning</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Targeted sales &amp; revenue growth strategies</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Hospitality cloud &amp; tech solution alignment</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5: Business & Stakeholder Coordination -->
+                <div data-category="stakeholder" class="expertise-card bg-white rounded-2xl p-7 border border-navy/10 shadow-executive hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-2">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-navy text-brass flex items-center justify-center">
+                                <i class="fa-solid fa-network-wired text-lg"></i>
+                            </div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-brass bg-brass-muted px-3 py-1 rounded-full">Cross-Functional Execution</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy mb-3">Business &amp; Stakeholder Coordination</h3>
+                        <p class="text-slate-body text-sm leading-relaxed mb-5">
+                            Bridging ownership vision, external suppliers, facility maintenance teams, and departmental leads to ensure uninterrupted commercial operations and new outlet launches.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 border-t border-navy/10 text-xs font-medium text-navy">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Vendor &amp; supplier engagement</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Strategic procurement &amp; cost management</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> New outlet launch &amp; project coordination</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brass"></i> Proactive operational problem-solving</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CAREER TIMELINE & EXPERIENCE -->
+    <section id="experience" class="py-20 lg:py-28 bg-ivory">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-14">
+                <span class="text-brass font-semibold text-xs uppercase tracking-[0.2em]">Professional Trajectory</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy mt-2">
+                    Career Timeline &amp; Operational Experience
+                </h2>
+                <div class="gold-divider mt-4"></div>
+                <p class="text-slate-body mt-4 text-base">
+                    A progressive leadership track record spanning hospitality technology business development, multi-concept restaurant management, national QSR outlet launches, and hotel operations.
+                </p>
+            </div>
+
+            <!-- Vertical Timeline Container -->
+            <div class="relative border-l-2 border-brass/40 ml-3 sm:ml-6 space-y-10 pb-4">
+
+                <!-- Role 1: Head of Revenue | Apples of Gold Consulting (AOG) -->
+                <div class="relative pl-8 sm:pl-12">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-brass border-4 border-ivory shadow"></div>
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-brass/30 shadow-executive">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy text-brass text-xs font-bold uppercase tracking-wider">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brass"></span> Current Role
+                            </span>
+                            <span class="text-xs font-semibold text-slate-muted uppercase tracking-wider">Hospitality Consulting &amp; Tech</span>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy">Head of Revenue</h3>
+                        <p class="text-brass-dark font-semibold text-sm sm:text-base mt-0.5">Apples of Gold Consulting (AOG)</p>
+                        <ul class="mt-4 space-y-2.5 text-slate-body text-sm sm:text-base">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Leads revenue-focused business development activities within a hospitality consulting and technology solutions firm—the <strong>official partner of Yanolja Cloud Solution in Nigeria</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Drives hospitality business development, commercial growth, and executive engagement with hotels and restaurants.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Connects real-world hospitality operational challenges with tailored business and cloud technology solutions.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 2: Business Manager | Crossover Restaurant & Café Chocolat -->
+                <div class="relative pl-8 sm:pl-12">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-brass border-4 border-ivory shadow"></div>
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-navy/10 shadow-executive">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brass-muted text-brass-dark text-xs font-bold uppercase tracking-wider">
+                                February 2026 – Present &bull; Abuja
+                            </span>
+                            <span class="text-xs font-semibold text-slate-muted uppercase tracking-wider">Multi-Concept Hospitality</span>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy">Business Manager</h3>
+                        <p class="text-brass-dark font-semibold text-sm sm:text-base mt-0.5">Crossover Restaurant &amp; Café Chocolat</p>
+                        <ul class="mt-4 space-y-2.5 text-slate-body text-sm sm:text-base">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Business Manager for a dynamic multi-concept hospitality operation comprising a <strong>restaurant, café, bar, kitchen, bread bakery, cake bakery, store, grill section, and sit-out area</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Oversees and coordinates seamless daily operational activities across multiple distinct hospitality business units.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Brings a disciplined, broad operational perspective to administration, procurement, inventory control, and business operations.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 3: Restaurant Manager (Contract) / Business Manager | Tasty Chops n Grill -->
+                <div class="relative pl-8 sm:pl-12">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-navy border-4 border-ivory shadow"></div>
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-navy/10 shadow-executive">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy/5 text-navy text-xs font-bold uppercase tracking-wider">
+                                2018–2021 &amp; 2023–January 2026
+                            </span>
+                            <span class="text-xs font-semibold text-slate-muted uppercase tracking-wider">Two Management Tenures</span>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy">Restaurant Manager (Contract) / Business Manager</h3>
+                        <p class="text-brass-dark font-semibold text-sm sm:text-base mt-0.5">Tasty Chops n Grill</p>
+                        <ul class="mt-4 space-y-2.5 text-slate-body text-sm sm:text-base">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Held two trusted management engagements with the organization: <strong>Business Manager (2018–2021)</strong> and <strong>Restaurant Manager on a contract basis (2023–January 2026)</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Directed and coordinated end-to-end business operations, procurement, inventory management, administration, and workforce activities.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Supervised multi-functional teams and drove measurable improvements in operational efficiency, staff accountability, and service quality.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Coordinated facility readiness, preventive maintenance activities, supplier relationships, and executive operational reporting.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 4: Shift Manager | EAT N GO Ltd (Cold Stone Creamery) -->
+                <div class="relative pl-8 sm:pl-12">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-navy border-4 border-ivory shadow"></div>
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-navy/10 shadow-executive">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy/5 text-navy text-xs font-bold uppercase tracking-wider">
+                                2021 – 2022
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-brass-dark">
+                                <i class="fa-solid fa-star"></i> Known as “Manager Seun”
+                            </span>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy">Shift Manager</h3>
+                        <p class="text-brass-dark font-semibold text-sm sm:text-base mt-0.5">EAT N GO Ltd (Cold Stone Creamery)</p>
+                        <ul class="mt-4 space-y-2.5 text-slate-body text-sm sm:text-base">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Supervised shift operations, staff deployment, inventory control, cash reconciliation, and high-volume customer service across <strong>Kubwa, Gwarimpa, and Jabi Lake Mall</strong> outlets.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Supported the successful opening of the <strong>Minna outlet</strong>, and was subsequently deployed to <strong>Jos</strong> as one of the key managers assigned to establish and launch the outlet from the outset.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-brass mt-1 text-xs"></i>
+                                <span>Earned wide recognition from colleagues and loyal customers alike as <strong>“Manager Seun”</strong> for approachable, hands-on leadership.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Earlier Hospitality Experience -->
+                <div class="relative pl-8 sm:pl-12">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-slate-400 border-4 border-ivory shadow"></div>
+                    <div class="bg-ivory-dark rounded-2xl p-6 sm:p-8 border border-navy/10">
+                        <span class="inline-block px-3 py-1 rounded-full bg-white text-navy text-xs font-bold uppercase tracking-wider mb-3">
+                            2015 – 2018 &bull; Foundational Leadership
+                        </span>
+                        <h3 class="font-serif text-xl font-bold text-navy">Earlier Hospitality Experience</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-white p-4 rounded-xl border border-navy/5">
+                                <p class="font-bold text-navy text-sm">Operations Supervisor</p>
+                                <p class="text-brass-dark font-medium text-xs mt-0.5">Lala’s Grill &bull; 2017–2018</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-navy/5">
+                                <p class="font-bold text-navy text-sm">Operations Supervisor</p>
+                                <p class="text-brass-dark font-medium text-xs mt-0.5">Peakolam Suites &bull; 2015–2017</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-body text-sm leading-relaxed mt-4">
+                            Built a strong operational foundation across restaurant and hotel environments, mastering staff coordination, opening and closing procedures, inventory verification, housekeeping coordination, facility readiness, and guest service standards.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONSULTING & SELECTED PROJECT ENGAGEMENTS -->
+    <section id="consulting" class="py-20 lg:py-28 bg-navy text-white relative overflow-hidden">
+        <div class="absolute inset-0 subtle-grid-pattern opacity-25 pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-14">
+                <span class="text-brass font-semibold text-xs uppercase tracking-[0.2em]">Advisory &amp; Turnaround Impact</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">
+                    Consulting &amp; Selected Project Engagements
+                </h2>
+                <div class="gold-divider mt-4"></div>
+                <p class="text-gray-300 mt-4 text-base">
+                    Focused advisory engagements delivering operational structure, manager readiness, inventory accuracy, and commercial strategy for hospitality properties.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Case Study 1: Qualer Apartments, Jos -->
+                <div class="bg-navy-light border border-white/10 rounded-2xl p-7 sm:p-9 shadow-2xl flex flex-col justify-between hover:border-brass/50 transition-colors">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+                            <span class="px-3.5 py-1 rounded-full bg-brass text-navy text-xs font-bold uppercase tracking-wider">
+                                Initial 2022 &bull; Re-Engaged Currently
+                            </span>
+                            <span class="text-xs text-gray-400 font-medium">
+                                <i class="fa-solid fa-location-dot text-brass mr-1"></i> Jos, Plateau State
+                            </span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-white">Qualer Apartments, Jos</h3>
+                        <p class="text-brass-light font-semibold text-sm mt-1">Hospitality Consultant</p>
+
+                        <p class="text-gray-300 text-sm leading-relaxed mt-4">
+                            Trusted repeat advisory partner engaged in 2022 and re-engaged for ongoing operational and commercial structuring of the property’s food-and-beverage infrastructure.
+                        </p>
+
+                        <div class="mt-6 space-y-3.5">
+                            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-navy/60 border border-white/5">
+                                <i class="fa-solid fa-fire-burner text-brass mt-1"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Kitchen Staff Training</h4>
+                                    <p class="text-xs text-gray-400 mt-0.5">Hands-on culinary workflow, hygiene, portion control, and service consistency training.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-navy/60 border border-white/5">
+                                <i class="fa-solid fa-boxes-stacked text-brass mt-1"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Monthly Inventory Audits</h4>
+                                    <p class="text-xs text-gray-400 mt-0.5">Structured stock verification and variance tracking to safeguard operational margins.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-navy/60 border border-white/5">
+                                <i class="fa-solid fa-file-signature text-brass mt-1"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Kitchen Outsourcing Transition</h4>
+                                    <p class="text-xs text-gray-400 mt-0.5">Currently overseeing the structured process of outsourcing the kitchen facility to a qualified operator/occupant.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-7 pt-5 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+                        <span>Status: <strong class="text-brass">Active Retainer / Re-Engaged</strong></span>
+                        <a href="#contact" class="text-white hover:text-brass font-semibold inline-flex items-center gap-1.5 transition-colors">
+                            Discuss Similar Advisory <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case Study 2: Stop Restaurant, Jos -->
+                <div class="bg-navy-light border border-white/10 rounded-2xl p-7 sm:p-9 shadow-2xl flex flex-col justify-between hover:border-brass/50 transition-colors">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+                            <span class="px-3.5 py-1 rounded-full bg-white/10 text-brass-light border border-brass/30 text-xs font-bold uppercase tracking-wider">
+                                2023 Engagement
+                            </span>
+                            <span class="text-xs text-gray-400 font-medium">
+                                <i class="fa-solid fa-location-dot text-brass mr-1"></i> Jos, Plateau State
+                            </span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-white">Stop Restaurant, Jos</h3>
+                        <p class="text-brass-light font-semibold text-sm mt-1">Operations Consultant</p>
+
+                        <p class="text-gray-300 text-sm leading-relaxed mt-4">
+                            Comprehensive multi-unit operational overhaul covering leadership placement, cross-department inventory controls, brand renovation direction, and peak-season revenue growth.
+                        </p>
+
+                        <div class="mt-6 space-y-3">
+                            <div class="flex items-start gap-3 p-3 rounded-xl bg-navy/60 border border-white/5">
+                                <i class="fa-solid fa-user-tie text-brass mt-1"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Leadership Recruitment &amp; Onboarding</h4>
+                                    <p class="text-xs text-gray-400 mt-0.5">Recommended and trained the newly appointed Restaurant Manager for sustained leadership accountability.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 p-3 rounded-xl bg-navy/60 border border-white/5">
+                                <i class="fa-solid fa-table-list text-brass mt-1"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Multi-Department Reporting Templates</h4>
+                                    <p class="text-xs text-gray-400 mt-0.5">Designed custom reporting templates for the <strong>kitchen, bakery, store, and supermarket</strong> to strengthen inventory tracking and accuracy.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3 p-3 rounded-xl bg-navy/60 border border-white/5">
+                                <i class="fa-solid fa-compass-drafting text-brass mt-1"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Rebranding Concept &amp; End-of-Year Sales Strategy</h4>
+                                    <p class="text-xs text-gray-400 mt-0.5">Created a rebranding style/concept to guide the restaurant’s physical renovation alongside a targeted end-of-year revenue strategy and service delivery coaching.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-7 pt-5 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+                        <span>Scope: <strong class="text-white">Turnaround, Controls &amp; Rebranding</strong></span>
+                        <a href="#contact" class="text-white hover:text-brass font-semibold inline-flex items-center gap-1.5 transition-colors">
+                            Request Operations Audit <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SIGNATURE LEADERSHIP TRAINING & FACILITATION -->
+    <section id="training" class="py-20 lg:py-28 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header Banner -->
+            <div class="bg-white rounded-3xl border border-navy/10 shadow-executive overflow-hidden mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    <div class="lg:col-span-8 p-8 sm:p-12 space-y-5">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brass-muted text-brass-dark text-xs font-bold uppercase tracking-[0.16em]">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                            Signature Facilitation Workshop
+                        </div>
+                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy leading-tight">
+                            FROM MANAGER TO LEADER
+                        </h2>
+                        <p class="text-lg sm:text-xl font-serif italic text-brass-dark">
+                            Building Accountable Teams and Driving Operational Excellence in Hospitality
+                        </p>
+                        <p class="text-slate-body text-base leading-relaxed max-w-2xl">
+                            A practical, high-impact workshop drawing directly on Olushola’s real-world progression from Operations Supervisor and Shift Manager to Business Manager and Hospitality Consultant—bridging the gap between holding a managerial title and inspiring consistent daily execution.
+                        </p>
+                    </div>
+
+                    <!-- Format Specs Card -->
+                    <div class="lg:col-span-4 bg-navy text-white p-8 sm:p-10 flex flex-col justify-between">
+                        <div class="space-y-5">
+                            <h3 class="font-serif text-xl font-bold text-brass">Session Specifications</h3>
+                            <div class="space-y-4 text-sm">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-regular fa-clock text-brass mt-1"></i>
+                                    <div>
+                                        <span class="block text-gray-400 text-xs uppercase tracking-wider">Duration &amp; Delivery</span>
+                                        <span class="font-semibold text-white">3-Hour, In-Person, Interactive Session</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-users text-brass mt-1"></i>
+                                    <div>
+                                        <span class="block text-gray-400 text-xs uppercase tracking-wider">Target Audience</span>
+                                        <span class="font-semibold text-white">Hospitality, Hotel &amp; Restaurant Branch Managers &amp; Supervisors</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot text-brass mt-1"></i>
+                                    <div>
+                                        <span class="block text-gray-400 text-xs uppercase tracking-wider">Availability</span>
+                                        <span class="font-semibold text-white">Abuja &amp; Nationwide On-Site Delivery</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 mt-6 border-t border-white/10">
+                            <a href="#contact" data-prefill="Leadership Training: From Manager to Leader" class="prefill-booking w-full py-3.5 px-5 rounded-xl bg-brass text-navy font-bold text-sm text-center hover:bg-brass-light transition-all inline-flex items-center justify-center gap-2">
+                                <span>Book This Workshop</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Modules + Facilitation Approach & Outcomes -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                <!-- Left 7 Cols: Interactive 5 Learning Modules Accordion -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-serif text-2xl font-bold text-navy">Proposed Learning Modules</h3>
+                        <button type="button" id="toggle-all-modules" class="text-xs font-semibold text-brass-dark hover:text-navy underline underline-offset-4">
+                            Expand All
+                        </button>
+                    </div>
+
+                    <div id="modules-accordion" class="space-y-3.5">
+                        <!-- Module 1 -->
+                        <div class="module-item bg-white rounded-2xl border border-navy/10 shadow-sm overflow-hidden">
+                            <button type="button" class="module-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-ivory/60 transition-colors" aria-expanded="true">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-9 h-9 rounded-lg bg-navy text-brass font-serif font-bold text-sm flex items-center justify-center shrink-0">01</span>
+                                    <span class="font-serif text-lg font-bold text-navy">Leadership Beyond the Title</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-brass transition-transform duration-300 rotate-180"></i>
+                            </button>
+                            <div class="module-panel px-6 pb-6 pt-1 text-slate-body text-sm leading-relaxed border-t border-navy/5">
+                                Exploring the manager’s core responsibility in setting clear operational standards, modelling expected professional behaviour every shift, and creating clear direction for the team rather than relying solely on positional authority.
+                            </div>
+                        </div>
+
+                        <!-- Module 2 -->
+                        <div class="module-item bg-white rounded-2xl border border-navy/10 shadow-sm overflow-hidden">
+                            <button type="button" class="module-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-ivory/60 transition-colors" aria-expanded="false">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-9 h-9 rounded-lg bg-navy text-brass font-serif font-bold text-sm flex items-center justify-center shrink-0">02</span>
+                                    <span class="font-serif text-lg font-bold text-navy">People Management &amp; Professional Relationships</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-brass transition-transform duration-300"></i>
+                            </button>
+                            <div class="module-panel hidden px-6 pb-6 pt-1 text-slate-body text-sm leading-relaxed border-t border-navy/5">
+                                Cultivating mutual respect between superiors and subordinates, practicing clear two-way communication, delegating effectively, delivering actionable feedback, and handling workplace friction constructively.
+                            </div>
+                        </div>
+
+                        <!-- Module 3 -->
+                        <div class="module-item bg-white rounded-2xl border border-navy/10 shadow-sm overflow-hidden">
+                            <button type="button" class="module-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-ivory/60 transition-colors" aria-expanded="false">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-9 h-9 rounded-lg bg-navy text-brass font-serif font-bold text-sm flex items-center justify-center shrink-0">03</span>
+                                    <span class="font-serif text-lg font-bold text-navy">Building a Culture of Accountability</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-brass transition-transform duration-300"></i>
+                            </button>
+                            <div class="module-panel hidden px-6 pb-6 pt-1 text-slate-body text-sm leading-relaxed border-t border-navy/5">
+                                Establishing unambiguous role responsibilities, defining measurable daily expectations, maintaining disciplined managerial follow-through, and addressing performance gaps fairly and firmly without fear or intimidation.
+                            </div>
+                        </div>
+
+                        <!-- Module 4 -->
+                        <div class="module-item bg-white rounded-2xl border border-navy/10 shadow-sm overflow-hidden">
+                            <button type="button" class="module-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-ivory/60 transition-colors" aria-expanded="false">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-9 h-9 rounded-lg bg-navy text-brass font-serif font-bold text-sm flex items-center justify-center shrink-0">04</span>
+                                    <span class="font-serif text-lg font-bold text-navy">Turning SOPs into Daily Practice</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-brass transition-transform duration-300"></i>
+                            </button>
+                            <div class="module-panel hidden px-6 pb-6 pt-1 text-slate-body text-sm leading-relaxed border-t border-navy/5">
+                                Moving Standard Operating Procedures off paper binders and into everyday operational habits through active floor supervision, opening/closing checklists, structured shift handovers, and consistent follow-up.
+                            </div>
+                        </div>
+
+                        <!-- Module 5 -->
+                        <div class="module-item bg-white rounded-2xl border border-navy/10 shadow-sm overflow-hidden">
+                            <button type="button" class="module-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-ivory/60 transition-colors" aria-expanded="false">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-9 h-9 rounded-lg bg-navy text-brass font-serif font-bold text-sm flex items-center justify-center shrink-0">05</span>
+                                    <span class="font-serif text-lg font-bold text-navy">Operational Excellence Across Departments</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-brass transition-transform duration-300"></i>
+                            </button>
+                            <div class="module-panel hidden px-6 pb-6 pt-1 text-slate-body text-sm leading-relaxed border-t border-navy/5">
+                                Eliminating departmental silos by improving real-time communication, workflow coordination, and service consistency across restaurant service, kitchen, bar, housekeeping, store, and administration.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right 5 Cols: Facilitation Approach & Intended Outcomes -->
+                <div class="lg:col-span-5 space-y-6">
+                    <!-- Facilitation Approach -->
+                    <div class="bg-ivory-dark rounded-2xl p-6 sm:p-7 border border-navy/10">
+                        <h3 class="font-serif text-xl font-bold text-navy flex items-center gap-2.5 mb-4">
+                            <i class="fa-solid fa-compass text-brass"></i>
+                            Facilitation Approach
+                        </h3>
+                        <p class="text-xs text-slate-muted mb-4">
+                            Practical, interactive, and grounded in real hospitality management situations:
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-body">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-brass mt-1 text-xs"></i>
+                                <span>Uses realistic scenarios drawn directly from restaurant and hotel operations.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-brass mt-1 text-xs"></i>
+                                <span>Encourages peer discussion and open experience-sharing among branch managers.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-brass mt-1 text-xs"></i>
+                                <span>Works through practical people-management and accountability challenges.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-brass mt-1 text-xs"></i>
+                                <span>Translates operational expectations and SOPs into observable daily practices.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-brass mt-1 text-xs"></i>
+                                <span>Closes with concrete action plans participants apply immediately in their departments.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Intended Outcomes -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-7 border border-brass/30 shadow-executive">
+                        <h3 class="font-serif text-xl font-bold text-navy flex items-center gap-2.5 mb-4">
+                            <i class="fa-solid fa-trophy text-brass"></i>
+                            Intended Workshop Outcomes
+                        </h3>
+                        <ul class="space-y-2.5 text-sm text-slate-body">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-brass font-bold mt-1 text-xs"></i>
+                                <span>Managers lead with professionalism, quiet confidence, and mutual respect.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-brass font-bold mt-1 text-xs"></i>
+                                <span>Teams gain clearer responsibilities and understand expected service standards.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-brass font-bold mt-1 text-xs"></i>
+                                <span>Accountability issues are resolved constructively without intimidation.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-brass font-bold mt-1 text-xs"></i>
+                                <span>SOPs are reinforced through consistent daily routines and floor supervision.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-brass font-bold mt-1 text-xs"></i>
+                                <span>Departments coordinate seamlessly to elevate the end-to-end guest experience.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. EDUCATION, CERTIFICATIONS & CONTACT SECTION -->
+    <section id="contact" class="py-20 lg:py-28 bg-ivory-dark border-t border-navy/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14">
+
+                <!-- Left 5 Cols: Education & Direct Contact Details -->
+                <div class="lg:col-span-5 space-y-10">
+                    <!-- Education & Certifications -->
+                    <div>
+                        <span class="text-brass font-semibold text-xs uppercase tracking-[0.2em]">Academic &amp; Professional Credentials</span>
+                        <h2 class="font-serif text-3xl font-bold text-navy mt-2">
+                            Education &amp; Certifications
+                        </h2>
+                        <div class="gold-divider mt-4 mb-6"></div>
+
+                        <div class="space-y-4">
+                            <div class="bg-white p-5 rounded-2xl border border-navy/10 shadow-sm flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-navy text-brass flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-navy text-base">Bachelor of Science (B.Sc.), Physics</h3>
+                                    <p class="text-sm text-slate-body mt-0.5">Federal University of Agriculture, Abeokuta</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-navy/10 shadow-sm flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-navy text-brass flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-certificate"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-navy text-base">Business Management Certification</h3>
+                                    <p class="text-sm text-slate-body mt-0.5">Commercial Operations, Administration &amp; Financial Control</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-navy/10 shadow-sm flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-navy text-brass flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-navy text-base">Leadership, Operations &amp; Community Management</h3>
+                                    <p class="text-sm text-slate-body mt-0.5">Additional Specialized Executive &amp; Operational Training</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Contact Box -->
+                    <div class="bg-navy text-white rounded-2xl p-7 shadow-executive space-y-5">
+                        <h3 class="font-serif text-2xl font-bold text-white">Direct Executive Contact</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Available for hospitality consulting engagements, operational audits, hospitality cloud technology advisory, and in-house leadership workshops.
+                        </p>
+
+                        <div class="space-y-3.5 pt-2 text-sm">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-9 h-9 rounded-lg bg-white/10 text-brass flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <span>Abuja, Nigeria</span>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="tel:+2348135692732" class="flex items-center gap-3.5 hover:text-brass transition-colors">
+                                    <div class="w-9 h-9 rounded-lg bg-white/10 text-brass flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <span>+234 813 569 2732</span>
+                                </a>
+                                <button type="button" data-copy="+234 813 569 2732" class="copy-btn text-xs px-2.5 py-1 rounded bg-white/10 hover:bg-brass hover:text-navy transition-colors">
+                                    Copy
+                                </button>
+                            </div>
+
+                            <div class="flex items-center justify-between gap-2">
+                                <a href="mailto:nellyseun2008@gmail.com" class="flex items-center gap-3.5 hover:text-brass transition-colors truncate">
+                                    <div class="w-9 h-9 rounded-lg bg-white/10 text-brass flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <span class="truncate">nellyseun2008@gmail.com</span>
+                                </a>
+                                <button type="button" data-copy="nellyseun2008@gmail.com" class="copy-btn text-xs px-2.5 py-1 rounded bg-white/10 hover:bg-brass hover:text-navy transition-colors shrink-0">
+                                    Copy
+                                </button>
+                            </div>
+
+                            <a href="https://linkedin.com/in/olu3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 hover:text-brass transition-colors">
+                                <div class="w-9 h-9 rounded-lg bg-white/10 text-brass flex items-center justify-center shrink-0">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <span>linkedin.com/in/olu3</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right 7 Cols: Interactive Inquiry & Booking Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-8 sm:p-10 border border-navy/10 shadow-executive">
+                        <span class="text-brass font-semibold text-xs uppercase tracking-[0.2em]">Initiate a Conversation</span>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-navy mt-1.5">
+                            Consulting &amp; Training Inquiry
+                        </h3>
+                        <p class="text-slate-body text-sm mt-2 mb-7">
+                            Complete the form below to schedule a discovery call, request a hospitality operations audit, or book the <em>From Manager to Leader</em> workshop for your management team.
+                        </p>
+
+                        <!-- Feedback Banner (Hidden by default) -->
+                        <div id="form-feedback" class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 mt-0.5 text-base"></i>
+                            <div>
+                                <p class="font-semibold">Inquiry Prepared Successfully</p>
+                                <p id="form-feedback-text" class="text-xs text-emerald-800 mt-1"></p>
+                            </div>
+                        </div>
+
+                        <form id="inquiry-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="full-name" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Full Name *</label>
+                                    <input type="text" id="full-name" required placeholder="e.g. Adebayo Mensah"
+                                        class="w-full px-4 py-3 rounded-xl bg-ivory border border-navy/15 text-navy text-sm focus:outline-none focus:border-brass focus:ring-2 focus:ring-brass/20 transition-all">
+                                </div>
+                                <div>
+                                    <label for="organization" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Hotel / Restaurant / Organization *</label>
+                                    <input type="text" id="organization" required placeholder="e.g. Grand Horizon Suites"
+                                        class="w-full px-4 py-3 rounded-xl bg-ivory border border-navy/15 text-navy text-sm focus:outline-none focus:border-brass focus:ring-2 focus:ring-brass/20 transition-all">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="email" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Email Address *</label>
+                                    <input type="email" id="email" required placeholder="you@organization.com"
+                                        class="w-full px-4 py-3 rounded-xl bg-ivory border border-navy/15 text-navy text-sm focus:outline-none focus:border-brass focus:ring-2 focus:ring-brass/20 transition-all">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Phone Number *</label>
+                                    <input type="tel" id="phone" required placeholder="+234 800 000 0000"
+                                        class="w-full px-4 py-3 rounded-xl bg-ivory border border-navy/15 text-navy text-sm focus:outline-none focus:border-brass focus:ring-2 focus:ring-brass/20 transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="engagement-type" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Area of Engagement *</label>
+                                <select id="engagement-type" required
+                                    class="w-full px-4 py-3 rounded-xl bg-ivory border border-navy/15 text-navy text-sm focus:outline-none focus:border-brass focus:ring-2 focus:ring-brass/20 transition-all">
+                                    <option value="Hospitality Operations Consulting">Hospitality Operations Consulting &amp; Audits</option>
+                                    <option value="Leadership Training: From Manager to Leader">Leadership Training: "From Manager to Leader" (3-Hr Workshop)</option>
+                                    <option value="Kitchen & Staff Capability Training">Kitchen Staff Training &amp; SOP Implementation</option>
+                                    <option value="Yanolja Cloud / Revenue & Tech Solutions">Revenue Growth &amp; Yanolja Cloud Hospitality Solutions (AOG)</option>
+                                    <option value="General Executive Inquiry">General Executive / Management Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Project Scope or Team Details *</label>
+                                <textarea id="message" rows="4" required placeholder="Share a brief overview of your property, number of managers/staff, or operational objectives..."
+                                    class="w-full px-4 py-3 rounded-xl bg-ivory border border-navy/15 text-navy text-sm focus:outline-none focus:border-brass focus:ring-2 focus:ring-brass/20 transition-all"></textarea>
+                            </div>
+
+                            <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                                <button type="submit"
+                                    class="px-8 py-4 rounded-xl bg-navy text-white font-semibold text-sm hover:bg-navy-light transition-all shadow-lg inline-flex items-center gap-2.5">
+                                    <span>Submit &amp; Send via Email</span>
+                                    <i class="fa-solid fa-paper-plane text-brass text-xs"></i>
+                                </button>
+                                <span class="text-xs text-slate-muted">
+                                    Direct response within 24 business hours.
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-dark text-gray-400 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                    <p class="font-serif text-white font-bold text-lg tracking-wide">OLUSHOLA O. OLUBODE</p>
+                    <p class="text-xs text-brass mt-1">Hospitality Consultant &bull; Operations &amp; Business Management &bull; Leadership Facilitator</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="#profile" class="hover:text-brass transition-colors">Profile</a>
+                    <a href="#expertise" class="hover:text-brass transition-colors">Expertise</a>
+                    <a href="#experience" class="hover:text-brass transition-colors">Experience</a>
+                    <a href="#consulting" class="hover:text-brass transition-colors">Consulting</a>
+                    <a href="#training" class="hover:text-brass transition-colors">Leadership Training</a>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <a href="tel:+2348135692732" aria-label="Call Olushola" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-brass hover:text-navy flex items-center justify-center text-gray-300 transition-colors">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                    </a>
+                    <a href="mailto:nellyseun2008@gmail.com" aria-label="Email Olushola" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-brass hover:text-navy flex items-center justify-center text-gray-300 transition-colors">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/olu3" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-brass hover:text-navy flex items-center justify-center text-gray-300 transition-colors">
+                        <i class="fa-brands fa-linkedin-in text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-2">
+                <p>&copy; <span id="current-year">2026</span> Olushola O. Olubode. All rights reserved.</p>
+                <p>Abuja, Nigeria &bull; +234 813 569 2732</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification for Clipboard Actions -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-navy text-white border border-brass/50 px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm">
+            <i class="fa-solid fa-check-circle text-brass"></i>
+            <span id="toast-message">Copied to clipboard</span>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic year
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // 1. Mobile Navigation Toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-xmark');
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileBtn.querySelector('i');
+                        if (icon) {
+                            icon.classList.add('fa-bars');
+                            icon.classList.remove('fa-xmark');
+                        }
+                    });
+                });
+            }
+
+            // 2. Interactive Expertise Domain Filter
+            const tabs = document.querySelectorAll('.expertise-tab');
+            const cards = document.querySelectorAll('.expertise-card');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const filter = tab.getAttribute('data-filter');
+
+                    // Update active tab styling
+                    tabs.forEach(t => {
+                        t.classList.remove('bg-navy', 'text-white', 'shadow-sm');
+                        t.classList.add('bg-white', 'text-navy', 'border', 'border-navy/10');
+                    });
+                    tab.classList.remove('bg-white', 'text-navy', 'border', 'border-navy/10');
+                    tab.classList.add('bg-navy', 'text-white', 'shadow-sm');
+
+                    // Filter cards smoothly
+                    cards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            card.classList.remove('hidden');
+                            // Reset col-span when filtered to single item for clean layout
+                            if (filter !== 'all') {
+                                card.classList.add('md:col-span-2', 'lg:col-span-3');
+                            } else {
+                                card.classList.remove('md:col-span-2', 'lg:col-span-3');
+                                if (category === 'stakeholder') {
+                                    card.classList.add('md:col-span-2', 'lg:col-span-2');
+                                }
+                            }
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // 3. Interactive Learning Modules Accordion
+            const moduleTriggers = document.querySelectorAll('.module-trigger');
+            const toggleAllBtn = document.getElementById('toggle-all-modules');
+            let allExpanded = false;
+
+            moduleTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const panel = trigger.nextElementSibling;
+                    const chevron = trigger.querySelector('.fa-chevron-down');
+                    const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+                    trigger.setAttribute('aria-expanded', String(!isExpanded));
+                    panel.classList.toggle('hidden');
+                    if (chevron) {
+                        chevron.classList.toggle('rotate-180');
+                    }
+                });
+            });
+
+            if (toggleAllBtn) {
+                toggleAllBtn.addEventListener('click', () => {
+                    allExpanded = !allExpanded;
+                    moduleTriggers.forEach(trigger => {
+                        const panel = trigger.nextElementSibling;
+                        const chevron = trigger.querySelector('.fa-chevron-down');
+                        trigger.setAttribute('aria-expanded', String(allExpanded));
+                        if (allExpanded) {
+                            panel.classList.remove('hidden');
+                            if (chevron) chevron.classList.add('rotate-180');
+                        } else {
+                            panel.classList.add('hidden');
+                            if (chevron) chevron.classList.remove('rotate-180');
+                        }
+                    });
+                    toggleAllBtn.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+                });
+            }
+
+            // 4. Prefill Booking Selection from Training CTA
+            const prefillBtns = document.querySelectorAll('.prefill-booking');
+            const engagementSelect = document.getElementById('engagement-type');
+
+            prefillBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const value = btn.getAttribute('data-prefill');
+                    if (engagementSelect && value) {
+                        engagementSelect.value = value;
+                    }
+                });
+            });
+
+            // 5. Clipboard Copy Utility (using execCommand fallback for iFrame safety)
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            let toastTimeout;
+
+            function showToast(message) {
+                if (!toast || !toastMsg) return;
+                toastMsg.textContent = message;
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                clearTimeout(toastTimeout);
+                toastTimeout = setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 2800);
+            }
+
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const textToCopy = btn.getAttribute('data-copy');
+                    if (!textToCopy) return;
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = textToCopy;
+                    tempInput.style.position = 'fixed';
+                    tempInput.style.opacity = '0';
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    try {
+                        document.execCommand('copy');
+                        showToast(`Copied: ${textToCopy}`);
+                    } catch (err) {
+                        showToast('Unable to copy automatically');
+                    }
+                    document.body.removeChild(tempInput);
+                });
+            });
+
+            // 6. Interactive Inquiry Form Handling
+            const inquiryForm = document.getElementById('inquiry-form');
+            const feedbackBanner = document.getElementById('form-feedback');
+            const feedbackText = document.getElementById('form-feedback-text');
+
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('full-name').value.trim();
+                    const org = document.getElementById('organization').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const type = document.getElementById('engagement-type').value;
+                    const msg = document.getElementById('message').value.trim();
+
+                    const subject = encodeURIComponent(`[Executive Inquiry] ${type} — ${org}`);
+                    const body = encodeURIComponent(
+                        `Hello Olushola,\n\n` +
+                        `I would like to connect regarding: ${type}\n\n` +
+                        `Name: ${name}\n` +
+                        `Organization: ${org}\n` +
+                        `Email: ${email}\n` +
+                        `Phone: ${phone}\n\n` +
+                        `Details:\n${msg}\n\n` +
+                        `Best regards,\n${name}`
+                    );
+
+                    if (feedbackBanner && feedbackText) {
+                        feedbackText.textContent = `Thank you, ${name}. Your ${type} brief for ${org} is ready—opening your default email client to dispatch directly to nellyseun2008@gmail.com.`;
+                        feedbackBanner.classList.remove('hidden');
+                        feedbackBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+
+                    window.location.href = `mailto:nellyseun2008@gmail.com?subject=${subject}&body=${body}`;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
